@@ -8,8 +8,8 @@ my $builder = Module::Build->new(
     dist_author         => 'Kathryn Andersen',
     dist_version_from   => 'lib/Posy/Plugin/Pod.pm',
 	requires            => {
-	'Posy' => 0.40,
-	'Posy::Plugin::EntryTitles' => 0.40,
+	'Posy' => 0.90,
+	'Posy::Plugin::EntryTitles' => 0.50,
 	'Pod::Simple::HTML' => 3.01,
 	},
     build_requires => {
