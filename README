@@ -1,0 +1,50 @@
+
+==== NAME ====
+
+Posy::Plugin::Pod - Posy plugin to convert POD files to HTML
+
+
+==== VERSION ====
+
+This describes version ``0.40'' of Posy::Plugin::Pod.
+
+
+==== DESCRIPTION ====
+
+This uses the Pod::Simple::HTML module to convert the the POD (Plain Old
+Documentation) in a .pm or .pod file into HTML. This expects the
+file_extensions to have been set so that files with appropriate extensions
+(such as .pm or .pod) will have been set with a file-type of 'pod'. This
+then converts entries of the 'pod' type.
+
+This replaces the 'parse_entry' method, and calls the parent method for
+anything other than POD.
+
+This also replaces the 'get_title' method used by Posy::Plugin::EntryTitles,
+so if one is using that module, one needs to put this after that in the
+plugin list.
+
+
+==== REQUIRES ====
+
+    Posy
+    Posy::Core
+    Pod::Simple::HTML
+
+    Test::More
+
+
+==== AUTHOR ====
+
+    Kathryn Andersen (RUBYKAT)
+    perlkat AT katspace dot com
+    http://www.katspace.com
+
+
+==== COPYRIGHT AND LICENCE ====
+
+Copyright (c) 2004-2005 by Kathryn Andersen
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+

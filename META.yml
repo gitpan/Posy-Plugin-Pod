@@ -1,0 +1,18 @@
+--- #YAML:1.0
+name: Posy-Plugin-Pod
+version: 0.40
+author:
+  - Kathryn Andersen
+abstract: Posy plugin to convert POD files to HTML
+license: perl
+requires:
+  Pod::Simple::HTML: 3.01
+  Posy: 0.4
+  Posy::Plugin::EntryTitles: 0.4
+build_requires:
+  Test::More: 0
+provides:
+  Posy::Plugin::Pod:
+    file: lib/Posy/Plugin/Pod.pm
+    version: 0.40
+generated_by: Module::Build version 0.2607
