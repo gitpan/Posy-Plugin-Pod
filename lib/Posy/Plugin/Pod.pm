@@ -7,11 +7,11 @@ Posy::Plugin::Pod - Posy plugin to convert POD files to HTML
 
 =head1 VERSION
 
-This describes version B<0.40> of Posy::Plugin::Pod.
+This describes version B<0.41> of Posy::Plugin::Pod.
 
 =cut
 
-our $VERSION = '0.40';
+our $VERSION = '0.41';
 
 =head1 SYNOPSIS
 
@@ -78,9 +78,8 @@ sub parse_entry {
 	$html =~ m#<body([^>]*)>(.*)</body>#is;
 	$current_entry->{body_attrib} = $1;
 	$current_entry->{body} = $2;
-	# the dump plugin doesn't like this object, so delete it
-	# if we are dumping
-	delete $self->{Pod}->{obj} if ($INC{'Posy/Plugin/Dump.pm'});
+	# this doesn't work properly on multiple texts, so delete the object
+	delete $self->{Pod}->{obj};
     }
     else # use parent
     {
@@ -118,9 +117,9 @@ sub get_title {
 	$title = $self->{Pod}->{obj}->get_short_title;
 	$title = $self->{files}->{$file_id}->{basename} if (!$title);
 	$self->debug(2, "$file_id title=$title");
-	# the dump plugin doesn't like this object, so delete it
-	# if we are dumping
-	delete $self->{Pod}->{obj} if ($INC{'Posy/Plugin/Dump.pm'});
+	# This needs to be reset without actually parsing the file
+	# so just delete the object
+	delete $self->{Pod}->{obj};
     }
     else # use parent
     {

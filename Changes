@@ -1,6 +1,15 @@
 Revision history for Posy-Plugin-Pod
 ====================================
 
+0.41 Sun 16 January 2005
+------------------------
+
+  * (16 Jan 2005) fix for multiple entries
+  	It seems that the Pod::Simple::HTML object isn't really designed
+  to be reset when it changes the source, so in order to make things work
+  correctly on multiple POD entries, one needs to recreate the object
+  each time.  Oh well.
+
 0.40 Sat 15 January 2005
 ------------------------
 
