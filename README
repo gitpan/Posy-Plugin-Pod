@@ -6,7 +6,7 @@ Posy::Plugin::Pod - Posy plugin to convert POD files to HTML.
 
 ==== VERSION ====
 
-This describes version ``0.42'' of Posy::Plugin::Pod.
+This describes version ``0.43'' of Posy::Plugin::Pod.
 
 
 ==== DESCRIPTION ====

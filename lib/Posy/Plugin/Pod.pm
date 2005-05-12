@@ -7,11 +7,11 @@ Posy::Plugin::Pod - Posy plugin to convert POD files to HTML.
 
 =head1 VERSION
 
-This describes version B<0.42> of Posy::Plugin::Pod.
+This describes version B<0.43> of Posy::Plugin::Pod.
 
 =cut
 
-our $VERSION = '0.42';
+our $VERSION = '0.43';
 
 =head1 SYNOPSIS
 
